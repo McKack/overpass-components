@@ -16,7 +16,7 @@
       "upstream": "https://github.com/McKack/overpass-runtime",
       "assets": [
         {
-          "arch": "x86_64",
+          "arch": "any",
           "url": "https://github.com/McKack/overpass-runtime/releases/download/v0.3.0/overpass-runtime-0.3.0.tar.xz",
           "sha256": "b466194f3ac1b0e7b8666a54594f2781b123caec57198f6f2c6551557922ba20",
           "format": "tar.xz"

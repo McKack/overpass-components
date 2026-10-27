@@ -58,7 +58,7 @@ Each folder in `components/` holds a `manifest.json` (plus README and licence no
 | `parts` | What the component is made of, for credits and checks |
 
 Each part has `name`, `version`, `authors`, `licence` (SPDX where there is one), `upstream` and `assets`. An asset
-has an `arch` and either a pinned `url` with its `sha256`, or a `urlTemplate` that OverPass fills in (`{version}`,
+has an `arch`, the Mac it is for (`arm64`, `x86_64`, or `any` for x86_64 code that runs under Rosetta too), and either a pinned `url` with its `sha256`, or a `urlTemplate` that OverPass fills in (`{version}`,
 `{arch}`) when the version comes from somewhere else: the installed Wine for Wine Mono and Gecko, the latest tag
 for Winetricks. `format` is `tar.xz` (extracted into the location) or `file` (one executable).
 
