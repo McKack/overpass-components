@@ -34,7 +34,7 @@ your build really has.
 | Feature | Commits (overpass-wine) | Notes |
 |---|---|---|
 | `af-unix` | "Add support for AF_UNIX sockets" (Wine MR !7650) | Plain upstream Wine 11 |
-| `winhttp-http2` | "libnghttp2: nghttp2 1.70.0 …", "winhttp: HTTP/2 through nghttp2 …", "winhttp: response decompression …", "libnghttp2: drop nghttp2's optional config.h includes …", "fix: asphalt legends http connect failure" | Adds the `libnghttp2` builtin DLL |
+| `winhttp-http2` | "libnghttp2: nghttp2 1.70.0 …", "winhttp: HTTP/2 through nghttp2 …", "winhttp: response decompression …", "libnghttp2: drop nghttp2's optional config.h includes …", "fix: asphalt legends http connect failure", "winhttp: offer HTTP/2 only when asked …" | Adds the `libnghttp2` builtin DLL. HTTP/2 is used when a program asks for it, or for every connection with `OVERPASS_WINHTTP_HTTP2=1` |
 | `dll-file-map` | "ntdll: Support loading the main image from an inherited file descriptor." | |
 | `gdk-winrt` | "fix: add mc gdk patchset", "fix: remove unused hr variable", "wine-appstate-registration", "wine-winhttp-gdk-options", "wine-mscoree-mono-path-bounds", "kernelbase: Add stub for GetIntegratedDisplaySize()." | |
 | `dll-path-prepend`, `compat-rules`, `d3d9-backend-rule`, `no-mac-frame`, `max-resolution`, `services-elevated`, `rosetta-code-regions`, `game-mode-bundle`, `x87sidecar` | Patches 1–13 in `overpass/PATCHES.md` | Several build on CodeWeavers' LGPL changes |
