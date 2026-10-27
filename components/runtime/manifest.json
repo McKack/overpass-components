@@ -1,0 +1,27 @@
+{
+  "id": "runtime",
+  "name": "OverPass Runtime",
+  "plainName": "Game graphics",
+  "summary": "Lets Windows games draw with your Mac's graphics chip: Direct3D 9 to 12 on Metal.",
+  "kind": "dlls",
+  "recommended": true,
+  "requires": { "wineFeatures": ["dll-path-prepend>=1", "compat-rules>=1"] },
+  "install": { "location": "OverPass Runtime", "keep": "extract the tarball's single top folder here (x86_64-windows/, x86_64-unix/)" },
+  "parts": [
+    {
+      "name": "OverPass Runtime",
+      "version": "0.3.0",
+      "authors": "OverPass · DXMT by Feifan He (3Shain) and contributors · mtld3d by Alexander Theißen",
+      "licence": "LGPL-2.1-or-later AND Zlib",
+      "upstream": "https://github.com/McKack/overpass-runtime",
+      "assets": [
+        {
+          "arch": "x86_64",
+          "url": "https://github.com/McKack/overpass-runtime/releases/download/v0.3.0/overpass-runtime-0.3.0.tar.xz",
+          "sha256": "b466194f3ac1b0e7b8666a54594f2781b123caec57198f6f2c6551557922ba20",
+          "format": "tar.xz"
+        }
+      ]
+    }
+  ]
+}

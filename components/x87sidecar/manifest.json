@@ -1,0 +1,26 @@
+{
+  "id": "x87sidecar",
+  "name": "x87sidecar",
+  "plainName": "Faster older games",
+  "summary": "Speeds up the math in older 32-bit games. Only games you turn it on for use it.",
+  "kind": "tool",
+  "requires": { "wineFeatures": ["x87sidecar>=1"], "arch": ["arm64"] },
+  "install": { "location": "Tools/x87sidecar", "executable": "x87sidecar" },
+  "parts": [
+    {
+      "name": "x87sidecar",
+      "version": "1.9.0",
+      "authors": "Alexander Theißen",
+      "licence": "MIT",
+      "upstream": "https://github.com/athei/x87sidecar",
+      "assets": [
+        {
+          "arch": "arm64",
+          "url": "https://github.com/athei/x87sidecar/releases/download/v1.9.0/x87sidecar.tar.xz",
+          "sha256": "104098b0ba8baed37d4d63cf62ab3b55493889b8fe9ee225cad8febcd6bc1e78",
+          "format": "tar.xz"
+        }
+      ]
+    }
+  ]
+}

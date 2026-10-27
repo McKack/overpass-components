@@ -1,0 +1,18 @@
+{
+  "id": "winetricks",
+  "name": "Winetricks",
+  "plainName": "Extra Windows parts",
+  "summary": "Installs Windows pieces some games need, such as Visual C++ and .NET.",
+  "kind": "tool",
+  "install": { "location": "Tools/winetricks" },
+  "parts": [
+    {
+      "name": "Winetricks",
+      "version": "latest release",
+      "authors": "Winetricks contributors",
+      "licence": "LGPL-2.1-or-later",
+      "upstream": "https://github.com/Winetricks/winetricks",
+      "assets": [ { "arch": "any", "follow": "github-latest-tag", "repo": "Winetricks/winetricks", "urlTemplate": "https://raw.githubusercontent.com/Winetricks/winetricks/{version}/src/winetricks", "format": "file" } ]
+    }
+  ]
+}

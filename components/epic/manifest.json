@@ -1,0 +1,21 @@
+{
+  "id": "epic",
+  "name": "Legendary",
+  "plainName": "Epic Games Library",
+  "summary": "Your Epic games in OverPass, without installing the Epic Games Launcher.",
+  "kind": "store",
+  "install": { "location": "Tools/legendary", "executable": "legendary" },
+  "parts": [
+    {
+      "name": "Legendary",
+      "version": "0.21.1",
+      "authors": "Rodney (derrod) and the Legendary contributors",
+      "licence": "GPL-3.0-only",
+      "upstream": "https://github.com/legendary-gl/legendary",
+      "assets": [
+        { "arch": "arm64", "url": "https://github.com/legendary-gl/legendary/releases/download/0.21.1/legendary_macOS_arm64", "sha256": "d87978321dba9cb731fab40c72f0a30bed55baca8b5341ab21024c5733cd837e", "format": "file" },
+        { "arch": "x86_64", "url": "https://github.com/legendary-gl/legendary/releases/download/0.21.1/legendary_macOS_x64", "sha256": "3dfab50277284b5bb0104f8710e4ff1d9ff00c992e44f5843fd0c977c5cc99c4", "format": "file" }
+      ]
+    }
+  ]
+}

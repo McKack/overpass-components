@@ -1,0 +1,26 @@
+{
+  "id": "dotnet-web",
+  "name": "Wine Mono & Gecko",
+  "plainName": ".NET and web pages",
+  "summary": "Apps that need .NET or show web pages work without asking to download more.",
+  "kind": "wine-addons",
+  "install": { "location": "Wine add-ons cache", "keep": "the versions the installed Wine asks for, from its appwiz.cpl" },
+  "parts": [
+    {
+      "name": "Wine Mono",
+      "version": "asked by Wine",
+      "authors": "The Wine project",
+      "licence": "MIT AND others",
+      "upstream": "https://gitlab.winehq.org/wine-mono/wine-mono",
+      "assets": [ { "arch": "any", "urlTemplate": "https://dl.winehq.org/wine/wine-mono/{version}/wine-mono-{version}-x86.tar.xz", "sha256": "from Wine" } ]
+    },
+    {
+      "name": "Wine Gecko",
+      "version": "asked by Wine",
+      "authors": "The Wine project, Mozilla",
+      "licence": "MPL-2.0",
+      "upstream": "https://gitlab.winehq.org/wine/wine/-/wikis/Gecko",
+      "assets": [ { "arch": "any", "urlTemplate": "https://dl.winehq.org/wine/wine-gecko/{version}/wine-gecko-{version}-{arch}.tar.xz", "sha256": "from Wine" } ]
+    }
+  ]
+}

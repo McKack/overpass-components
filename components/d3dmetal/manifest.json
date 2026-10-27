@@ -1,0 +1,19 @@
+{
+  "id": "d3dmetal",
+  "name": "D3DMetal",
+  "plainName": "Apple's game graphics",
+  "summary": "Apple's own version of game graphics. Optional: some games run better with it.",
+  "kind": "import",
+  "requires": { "wineFeatures": ["compat-rules>=1"] },
+  "install": { "location": "D3DMetal", "keep": "the redist/lib folder of Apple's Game Porting Toolkit, imported by the person from Apple's download" },
+  "parts": [
+    {
+      "name": "D3DMetal (Game Porting Toolkit)",
+      "version": "imported",
+      "authors": "Apple Inc.",
+      "licence": "LicenseRef-Apple-GPTK (not redistributable)",
+      "upstream": "https://developer.apple.com/games/game-porting-toolkit/",
+      "assets": []
+    }
+  ]
+}

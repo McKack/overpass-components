@@ -1,0 +1,308 @@
+{
+  "format": 1,
+  "components": [
+    {
+      "id": "d3dmetal",
+      "name": "D3DMetal",
+      "plainName": "Apple's game graphics",
+      "summary": "Apple's own version of game graphics. Optional: some games run better with it.",
+      "kind": "import",
+      "requires": {
+        "wineFeatures": [
+          "compat-rules>=1"
+        ]
+      },
+      "install": {
+        "location": "D3DMetal",
+        "keep": "the redist/lib folder of Apple's Game Porting Toolkit, imported by the person from Apple's download"
+      },
+      "parts": [
+        {
+          "name": "D3DMetal (Game Porting Toolkit)",
+          "version": "imported",
+          "authors": "Apple Inc.",
+          "licence": "LicenseRef-Apple-GPTK (not redistributable)",
+          "upstream": "https://developer.apple.com/games/game-porting-toolkit/",
+          "assets": []
+        }
+      ]
+    },
+    {
+      "id": "dotnet-web",
+      "name": "Wine Mono & Gecko",
+      "plainName": ".NET and web pages",
+      "summary": "Apps that need .NET or show web pages work without asking to download more.",
+      "kind": "wine-addons",
+      "install": {
+        "location": "Wine add-ons cache",
+        "keep": "the versions the installed Wine asks for, from its appwiz.cpl"
+      },
+      "parts": [
+        {
+          "name": "Wine Mono",
+          "version": "asked by Wine",
+          "authors": "The Wine project",
+          "licence": "MIT AND others",
+          "upstream": "https://gitlab.winehq.org/wine-mono/wine-mono",
+          "assets": [
+            {
+              "arch": "any",
+              "urlTemplate": "https://dl.winehq.org/wine/wine-mono/{version}/wine-mono-{version}-x86.tar.xz",
+              "sha256": "from Wine"
+            }
+          ]
+        },
+        {
+          "name": "Wine Gecko",
+          "version": "asked by Wine",
+          "authors": "The Wine project, Mozilla",
+          "licence": "MPL-2.0",
+          "upstream": "https://gitlab.winehq.org/wine/wine/-/wikis/Gecko",
+          "assets": [
+            {
+              "arch": "any",
+              "urlTemplate": "https://dl.winehq.org/wine/wine-gecko/{version}/wine-gecko-{version}-{arch}.tar.xz",
+              "sha256": "from Wine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epic",
+      "name": "Legendary",
+      "plainName": "Epic Games Library",
+      "summary": "Your Epic games in OverPass, without installing the Epic Games Launcher.",
+      "kind": "store",
+      "install": {
+        "location": "Tools/legendary",
+        "executable": "legendary"
+      },
+      "parts": [
+        {
+          "name": "Legendary",
+          "version": "0.21.1",
+          "authors": "Rodney (derrod) and the Legendary contributors",
+          "licence": "GPL-3.0-only",
+          "upstream": "https://github.com/legendary-gl/legendary",
+          "assets": [
+            {
+              "arch": "arm64",
+              "url": "https://github.com/legendary-gl/legendary/releases/download/0.21.1/legendary_macOS_arm64",
+              "sha256": "d87978321dba9cb731fab40c72f0a30bed55baca8b5341ab21024c5733cd837e",
+              "format": "file"
+            },
+            {
+              "arch": "x86_64",
+              "url": "https://github.com/legendary-gl/legendary/releases/download/0.21.1/legendary_macOS_x64",
+              "sha256": "3dfab50277284b5bb0104f8710e4ff1d9ff00c992e44f5843fd0c977c5cc99c4",
+              "format": "file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gog",
+      "name": "gogdl",
+      "plainName": "GOG Library",
+      "summary": "Your GOG games in OverPass, without installing GOG Galaxy.",
+      "kind": "store",
+      "install": {
+        "location": "Tools/gogdl",
+        "executable": "gogdl"
+      },
+      "parts": [
+        {
+          "name": "gogdl",
+          "version": "1.3.1",
+          "authors": "imLinguin and the Heroic Games Launcher contributors",
+          "licence": "GPL-3.0-only",
+          "upstream": "https://github.com/Heroic-Games-Launcher/heroic-gogdl",
+          "assets": [
+            {
+              "arch": "arm64",
+              "url": "https://github.com/Heroic-Games-Launcher/heroic-gogdl/releases/download/v1.3.1/gogdl_macos_arm64",
+              "sha256": "33a6d9b329c35f1caa7968009bf2f4f0a6f57cd00f749a4d2cb2204f3e794d2e",
+              "format": "file"
+            },
+            {
+              "arch": "x86_64",
+              "url": "https://github.com/Heroic-Games-Launcher/heroic-gogdl/releases/download/v1.3.1/gogdl_macos_x86_64",
+              "sha256": "9f78f5916141692704f9587e6519082abc2b12c5f8825548fe4d1dee1e46180c",
+              "format": "file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "runtime",
+      "name": "OverPass Runtime",
+      "plainName": "Game graphics",
+      "summary": "Lets Windows games draw with your Mac's graphics chip: Direct3D 9 to 12 on Metal.",
+      "kind": "dlls",
+      "recommended": true,
+      "requires": {
+        "wineFeatures": [
+          "dll-path-prepend>=1",
+          "compat-rules>=1"
+        ]
+      },
+      "install": {
+        "location": "OverPass Runtime",
+        "keep": "extract the tarball's single top folder here (x86_64-windows/, x86_64-unix/)"
+      },
+      "parts": [
+        {
+          "name": "OverPass Runtime",
+          "version": "0.3.0",
+          "authors": "OverPass · DXMT by Feifan He (3Shain) and contributors · mtld3d by Alexander Theißen",
+          "licence": "LGPL-2.1-or-later AND Zlib",
+          "upstream": "https://github.com/McKack/overpass-runtime",
+          "assets": [
+            {
+              "arch": "x86_64",
+              "url": "https://github.com/McKack/overpass-runtime/releases/download/v0.3.0/overpass-runtime-0.3.0.tar.xz",
+              "sha256": "b466194f3ac1b0e7b8666a54594f2781b123caec57198f6f2c6551557922ba20",
+              "format": "tar.xz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wine",
+      "name": "OverPass Wine",
+      "plainName": "Windows support",
+      "summary": "Lets your Mac run Windows games and apps.",
+      "kind": "wine",
+      "required": true,
+      "install": {
+        "location": "Wine",
+        "keep": "extract the tarball's single top folder here"
+      },
+      "parts": [
+        {
+          "name": "OverPass Wine",
+          "version": "11.0-6",
+          "authors": "The Wine project · CodeWeavers' LGPL changes · OverPass Wine",
+          "licence": "LGPL-2.1-or-later",
+          "upstream": "https://github.com/McKack/overpass-wine",
+          "assets": [
+            {
+              "arch": "x86_64",
+              "url": "https://github.com/McKack/overpass-wine/releases/download/overpass-wine-11.0-6/overpass-wine-11.0-6-x86_64.tar.xz",
+              "sha256": "7cd8211e2fedf0f5aca8118521b6f5b0b494d6c9e9c2dca53d9d57cd5a8d05bc",
+              "format": "tar.xz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "winetricks",
+      "name": "Winetricks",
+      "plainName": "Extra Windows parts",
+      "summary": "Installs Windows pieces some games need, such as Visual C++ and .NET.",
+      "kind": "tool",
+      "install": {
+        "location": "Tools/winetricks"
+      },
+      "parts": [
+        {
+          "name": "Winetricks",
+          "version": "latest release",
+          "authors": "Winetricks contributors",
+          "licence": "LGPL-2.1-or-later",
+          "upstream": "https://github.com/Winetricks/winetricks",
+          "assets": [
+            {
+              "arch": "any",
+              "follow": "github-latest-tag",
+              "repo": "Winetricks/winetricks",
+              "urlTemplate": "https://raw.githubusercontent.com/Winetricks/winetricks/{version}/src/winetricks",
+              "format": "file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "x87sidecar",
+      "name": "x87sidecar",
+      "plainName": "Faster older games",
+      "summary": "Speeds up the math in older 32-bit games. Only games you turn it on for use it.",
+      "kind": "tool",
+      "requires": {
+        "wineFeatures": [
+          "x87sidecar>=1"
+        ],
+        "arch": [
+          "arm64"
+        ]
+      },
+      "install": {
+        "location": "Tools/x87sidecar",
+        "executable": "x87sidecar"
+      },
+      "parts": [
+        {
+          "name": "x87sidecar",
+          "version": "1.9.0",
+          "authors": "Alexander Theißen",
+          "licence": "MIT",
+          "upstream": "https://github.com/athei/x87sidecar",
+          "assets": [
+            {
+              "arch": "arm64",
+              "url": "https://github.com/athei/x87sidecar/releases/download/v1.9.0/x87sidecar.tar.xz",
+              "sha256": "104098b0ba8baed37d4d63cf62ab3b55493889b8fe9ee225cad8febcd6bc1e78",
+              "format": "tar.xz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xbox",
+      "name": "Xodus",
+      "plainName": "Xbox Library",
+      "summary": "Your Xbox PC and Game Pass games in OverPass. Opt-in.",
+      "kind": "store",
+      "optIn": true,
+      "available": false,
+      "requires": {
+        "wineFeatures": [
+          "af-unix>=1",
+          "dll-file-map>=1",
+          "winhttp-http2>=1",
+          "gdk-winrt>=1",
+          "dll-path-prepend>=1"
+        ]
+      },
+      "install": {
+        "location": "Tools/xodus",
+        "executable": "xodus-cli"
+      },
+      "parts": [
+        {
+          "name": "Xodus (xodus-cli, xodus-service)",
+          "version": "not published yet",
+          "authors": "The Xodus contributors · Xodus Nexus and MACxus patches",
+          "licence": "GPL-3.0-only",
+          "upstream": "https://github.com/xodus-gaming/xodus",
+          "assets": []
+        },
+        {
+          "name": "xgameruntime",
+          "version": "not published yet",
+          "authors": "The Xodus contributors",
+          "licence": "LGPL-2.1-or-later",
+          "upstream": "https://github.com/xodus-gaming/xgameruntime",
+          "assets": []
+        }
+      ]
+    }
+  ]
+}

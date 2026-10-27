@@ -1,0 +1,29 @@
+{
+  "id": "xbox",
+  "name": "Xodus",
+  "plainName": "Xbox Library",
+  "summary": "Your Xbox PC and Game Pass games in OverPass. Opt-in.",
+  "kind": "store",
+  "optIn": true,
+  "available": false,
+  "requires": { "wineFeatures": ["af-unix>=1", "dll-file-map>=1", "winhttp-http2>=1", "gdk-winrt>=1", "dll-path-prepend>=1"] },
+  "install": { "location": "Tools/xodus", "executable": "xodus-cli" },
+  "parts": [
+    {
+      "name": "Xodus (xodus-cli, xodus-service)",
+      "version": "not published yet",
+      "authors": "The Xodus contributors · Xodus Nexus and MACxus patches",
+      "licence": "GPL-3.0-only",
+      "upstream": "https://github.com/xodus-gaming/xodus",
+      "assets": []
+    },
+    {
+      "name": "xgameruntime",
+      "version": "not published yet",
+      "authors": "The Xodus contributors",
+      "licence": "LGPL-2.1-or-later",
+      "upstream": "https://github.com/xodus-gaming/xgameruntime",
+      "assets": []
+    }
+  ]
+}
