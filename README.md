@@ -5,8 +5,8 @@ from, which versions OverPass uses and under which licences.
 
 | Component | In OverPass | Upstream |
 |---|---|---|
-| [OverPass Wine](components/wine) | Windows support (required) | [McKack/overpass-wine](https://github.com/McKack/overpass-wine) |
-| [OverPass Runtime](components/runtime) | Game graphics | [McKack/overpass-runtime](https://github.com/McKack/overpass-runtime) |
+| [overpass-wine](components/wine) | Windows support (required) | [McKack/overpass-wine](https://github.com/McKack/overpass-wine) |
+| [overpass-runtime](components/runtime) | Game graphics | [McKack/overpass-runtime](https://github.com/McKack/overpass-runtime) |
 | [Wine Mono & Gecko](components/dotnet-web) | .NET and web pages | [Wine Mono](https://gitlab.winehq.org/wine-mono/wine-mono), Wine Gecko |
 | [Winetricks](components/winetricks) | Extra Windows parts | [Winetricks/winetricks](https://github.com/Winetricks/winetricks) |
 | [D3DMetal](components/d3dmetal) | Apple's game graphics (imported by you) | [Game Porting Toolkit](https://developer.apple.com/games/game-porting-toolkit/) |

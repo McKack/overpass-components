@@ -5,7 +5,7 @@ for OverPass first; other apps and Wine builds can follow the same rules.
 
 ## 1. features.json: what a Wine build supports
 
-An OverPass Wine release carries `share/overpass/features.json`:
+An overpass-wine release carries `share/overpass/features.json`:
 
 ```json
 {
