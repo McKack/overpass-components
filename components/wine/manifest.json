@@ -9,15 +9,15 @@
   "parts": [
     {
       "name": "OverPass Wine",
-      "version": "11.0-9",
+      "version": "11.0-10",
       "authors": "The Wine project · CodeWeavers' LGPL changes · OverPass Wine",
       "licence": "LGPL-2.1-or-later",
       "upstream": "https://github.com/McKack/overpass-wine",
       "assets": [
         {
           "arch": "any",
-          "url": "https://github.com/McKack/overpass-wine/releases/download/overpass-wine-11.0-9/overpass-wine-11.0-9-x86_64.tar.xz",
-          "sha256": "5008fdd347f545a24eddf6c52888070c8dde12df9f5158af54957ba88b9e534a",
+          "url": "https://github.com/McKack/overpass-wine/releases/download/overpass-wine-11.0-10/overpass-wine-11.0-10-x86_64.tar.xz",
+          "sha256": "568929e46c55bc2cf46d004125bae78f16275498f2d10c47568f20a7511c6067",
           "format": "tar.xz"
         }
       ]
