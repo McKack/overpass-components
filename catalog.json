@@ -151,20 +151,20 @@
       },
       "install": {
         "location": "OverPass Runtime",
-        "keep": "extract the tarball's single top folder here (x86_64-windows/, x86_64-unix/)"
+        "keep": "extract the tarball's single top folder here (x86_64-windows/, i386-windows/, x86_64-unix/)"
       },
       "parts": [
         {
           "name": "OverPass Runtime",
-          "version": "0.3.0",
+          "version": "0.4.0",
           "authors": "OverPass · DXMT by Feifan He (3Shain) and contributors · mtld3d by Alexander Theißen",
           "licence": "LGPL-2.1-or-later AND Zlib",
           "upstream": "https://github.com/McKack/overpass-runtime",
           "assets": [
             {
               "arch": "any",
-              "url": "https://github.com/McKack/overpass-runtime/releases/download/v0.3.0/overpass-runtime-0.3.0.tar.xz",
-              "sha256": "b466194f3ac1b0e7b8666a54594f2781b123caec57198f6f2c6551557922ba20",
+              "url": "https://github.com/McKack/overpass-runtime/releases/download/v0.4.0/overpass-runtime-0.4.0.tar.xz",
+              "sha256": "6232314ee3023cba398137c736ea8918ffe19bac2d4eb8b10a3a20d2b2a4bc3e",
               "format": "tar.xz"
             }
           ]
