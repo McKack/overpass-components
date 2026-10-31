@@ -10,15 +10,15 @@
   "parts": [
     {
       "name": "OverPass Runtime",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "authors": "OverPass · DXMT by Feifan He (3Shain) and contributors · mtld3d by Alexander Theißen",
       "licence": "LGPL-2.1-or-later AND Zlib",
       "upstream": "https://github.com/McKack/overpass-runtime",
       "assets": [
         {
           "arch": "any",
-          "url": "https://github.com/McKack/overpass-runtime/releases/download/v0.4.0/overpass-runtime-0.4.0.tar.xz",
-          "sha256": "6232314ee3023cba398137c736ea8918ffe19bac2d4eb8b10a3a20d2b2a4bc3e",
+          "url": "https://github.com/McKack/overpass-runtime/releases/download/v0.5.0/overpass-runtime-0.5.0.tar.xz",
+          "sha256": "8e042eada5f1f009496eb457ea3d8e39fa93e76a79e66ce086b91f966172c048",
           "format": "tar.xz"
         }
       ]
