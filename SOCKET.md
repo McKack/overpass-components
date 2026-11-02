@@ -74,3 +74,17 @@ for Winetricks. `format` is `tar.xz` (extracted into the location) or `file` (on
 
 A catalog change reaches every OverPass user without an app release, so a version bump here is a release:
 test it in OverPass first.
+
+## Settings schema
+
+`settings.json` says what each setting and profile key means: its plain title, a sentence, its type, values and
+limits, and where that comes from. OverPass draws its Simple views from it, so a new setting or a better description
+reaches everyone without an app release.
+
+- OverPass ships with a copy and downloads this file when it checks for updates. It keeps whichever has the higher
+  `revision`, so raise `revision` with every change. Change the copy in the app's sources at the same time.
+- `format` goes up only for changes an older app can't read at all. An entry an app doesn't understand, such as a
+  new `kind`, is skipped on its own.
+- `kind` is `env`, `dxmt-config`, `mtld3d-config`, `rule-key`, `dll-override` or `profile-key`. For `profile-key`,
+  `group` is the section: `app`, `store`, `install` or `launch`.
+- `scripts/build-catalog.py` checks the file.

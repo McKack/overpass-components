@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Checks every components/<id>/manifest.json and writes catalog.json, the one file OverPass reads.
+"""Checks settings.json and every components/<id>/manifest.json, and writes catalog.json, the file OverPass
+reads for components.
 
 Run from the repository root: python3 scripts/build-catalog.py [--check]
 --check fails instead of writing when catalog.json is out of date (for CI).
@@ -49,7 +50,19 @@ def check(folder, m):
                 fail(where, f"{part['name']}: asset has neither url nor urlTemplate")
 
 
+def check_settings():
+    where = "settings.json"
+    schema = json.loads((ROOT / where).read_text())
+    if schema.get("format") != 1 or not isinstance(schema.get("revision"), int):
+        fail(where, "needs format 1 and a whole-number revision")
+    for setting in schema["settings"]:
+        for key in ("id", "kind", "type", "title", "summary", "technical", "group"):
+            if key not in setting:
+                fail(where, f"'{setting.get('id', '?')}' is missing '{key}'")
+
+
 def main():
+    check_settings()
     components = []
     for path in sorted((ROOT / "components").glob("*/manifest.json")):
         manifest = json.loads(path.read_text())
